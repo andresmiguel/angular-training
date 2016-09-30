@@ -1,8 +1,100 @@
 <!DOCTYPE html>
 <html>
-	<head>				
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="styles/app.css">
 		<title>Angular Training</title>
 	</head>
-	<body>		
+	<body>
+		<form>
+			<div class="form-header">
+				<h4>Workshop Registration</h4>							
+			</div>
+			<div class="form-body">
+				<div class="underlined">Register now while seats are available! </div>
+				<div class="wrapper">
+					<div class="row">
+						<div class="col-6 left-column">
+							<div class="row">
+								<label class="col-6 label">First Name <span class="asterReq">*</span></label>
+								<input class="col-6" type="text" />
+							</div>
+							<div class="row">
+								<label class="col-6 label">Last Name <span class="asterReq">*</span></label>
+								<input class="col-6" type="text" />
+							</div>
+							<div class="row">
+								<label class="col-6 label">Company/Institution <span class="asterReq">*</span></label>
+								<input class="col-6" type="text" />
+							</div>
+							<div class="row">
+								<label class="col-6 label">Address <span class="asterReq">*</span></label>
+								<textarea class="col-6" rows="5"></textarea>
+							</div>
+							<div class="row">
+								<label class="col-6 label">City</label>
+								<input class="col-6" type="text" />
+							</div>
+							<div class="row">
+								<label class="col-6 label">State / Province / Region</label>
+								<select class="col-6">
+									<option>-Select-</option>
+								</select>								
+							</div>
+							<div class="row">
+								<label class="col-6 label">Country <span class="asterReq">*</span></label>
+								<select class="col-6">
+									<option>-Select-</option>
+								</select>								
+							</div>
+							<div class="row">
+								<label class="col-6 label">Email <span class="asterReq">*</span></label>
+								<input class="col-6" type="email" />
+							</div>
+							<div class="row">
+								<label class="col-6 label">Phone Number <span class="asterReq">*</span></label>
+								<input class="col-6" type="text" />
+							</div>
+						</div>
+						<div class="col-6 right-column">
+							<div class="underlined">Lunch</div>
+							<div class="row">
+								<label class="col-6 label">Meal Preference</label>
+								<select class="col-6">
+									<option>Vegetarian</option>
+								</select>								
+							</div>
+							<div class="underlined">Payment Details</div>
+							<div class="row">
+								<label class="col-6 label">Payment Mode</label>
+								<div class="col-6 cbGroup">
+									<input type="checkbox">Cash<br>
+									<input type="checkbox">Cheque<br>
+									<input type="checkbox">Demand Draft<br>
+								</div>								
+							</div>
+							<div class="row">
+								<label class="col-6 label">DD/Cheque No.</label>
+								<input class="col-6" type="text" />								
+							</div>
+							<div class="row">
+								<label class="col-6 label">Drawn On (Bank Name)</label>
+								<input class="col-6" type="text" />								
+							</div>
+							<div class="row">
+								<label class="col-6 label">Payable at</label>
+								<input class="col-6" type="text" />								
+							</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+			<div class="form-footer">
+				<div class="row">
+					<div class="col-6"><button class="button">Submit</button></div>
+					<div class="col-6"><button class="button">Reset</button></div>				
+				</div>
+			</div>
+		</form>
 	</body>
 </html>
