@@ -1,2 +1,3 @@
 # angular-training
-The Workshop Registration form was created. The only issue that is missing in the form is the More Actions menu.
+The Workshop Registration form is done.
+The More Actions dropdown menu now appears on the hover event of the element. This behavior will be changed with angularJS.
