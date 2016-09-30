@@ -63,6 +63,16 @@ div.form-footer div.row [class*="col-"] {
 		text-align: left;
 		padding-left: 2px;
 	}
+
+	label.address {
+		margin-top: 2.5em;
+		height: 4.7em;
+	}
+
+	label.payment-mode {
+		margin-top: 1.7em;
+		height: 3em;
+	}
 }
 
 .underlined {
