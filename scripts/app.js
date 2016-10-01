@@ -1,4 +1,4 @@
-var angularTrainingApp = angular.module('angularTrainingApp', ['ui.router'])
+var angularTrainingApp = angular.module('angularTrainingApp', ['ui.router', 'angularTrainingApp.services'])
 
 angularTrainingApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 	
@@ -26,3 +26,6 @@ angularTrainingApp.config(['$stateProvider', '$urlRouterProvider', function ($st
 			}
 		})
 }])
+
+// create angularTrainingApp.services module
+angular.module('angularTrainingApp.services', [])

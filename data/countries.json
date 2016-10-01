@@ -1,0 +1,14 @@
+
+{
+	"countries": [ "Cuba", "USA" ],
+	"states": [
+		{
+			"country": "Cuba",
+			"states": ["Camaguey", "Pinar del Rio", "La Habana", "Matanzas"]
+		},
+		{
+			"country": "USA",
+			"states": ["California", "Florida", "Carolina del Norte"]
+		}
+	]
+}

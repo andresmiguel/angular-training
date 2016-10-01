@@ -39,13 +39,13 @@
 					</div>
 					<div class="row">
 						<label class="col-6 label">State / Province / Region</label>
-						<select class="col-6">
+						<select class="col-6" ng-model="wsReg.state" ng-options="s for s in stateList">
 							<option>-Select-</option>
 						</select>								
 					</div>
 					<div class="row">
 						<label class="col-6 label">Country <span class="asterReq">*</span></label>
-						<select class="col-6">
+						<select class="col-6" ng-model="wsReg.country" ng-options="c for c in countryList" ng-change="loadStates()">
 							<option>-Select-</option>
 						</select>								
 					</div>
@@ -62,8 +62,8 @@
 					<div class="underlined">Lunch</div>
 					<div class="row">
 						<label class="col-6 label">Meal Preference</label>
-						<select class="col-6">
-							<option>Vegetarian</option>
+						<select class="col-6" ng-model="wsReg.mealPref" ng-options="mf for mf in mealPrefList">
+							<option>-Select-</option>
 						</select>								
 					</div>
 					<div class="underlined">Payment Details</div>
