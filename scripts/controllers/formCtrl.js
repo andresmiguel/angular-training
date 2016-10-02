@@ -1,14 +1,20 @@
 angular.module('angularTrainingApp').controller('FormCtrl', ['$scope', '$location', 'CountryService', 'MealPrefService',
 	function ($scope, $location, CountryService, MealPrefService){
 
-		initCtrl();
+		initCtrl()
 
-		$scope.submit = function () {
-			$location.path("/confirmation")
+		$scope.submit = function (valid) {
+			if (valid) {
+				$location.path("/confirmation")
+			}			
+		}
+
+		$scope.resetForm = function () {
+			initCtrl()
 		}
 
 		function initCtrl() {
-			$scope.wsReg = {}
+			$scope.wsReg = {}			
 
 			$scope.states = []
 			CountryService.getAll().success(function (data) {

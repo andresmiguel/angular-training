@@ -1,5 +1,5 @@
 html {
-    font-family: "Verdana Sans", sans-serif;
+    font-family: "Verdana Sans", sans-serif !important;
 }
 
 * {
@@ -20,7 +20,7 @@ html {
     float: left;    
 }
 
-input[class*="col-"], select[class*="col-"], textarea[class*="col-"], .cbGroup {
+div.form-group {
 	margin-bottom: 1em;
 }
 
@@ -47,7 +47,7 @@ div.form-footer div.row [class*="col-"] {
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}	
 
-	input[class*="col-"], select[class*="col-"], textarea[class*="col-"], .cbGroup {
+	div.form-group {
 		margin-bottom: 1.4em;
 	}
 
@@ -166,4 +166,24 @@ input, select, textarea {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+input.ng-invalid.ng-touched  {
+	border-color: red;
+}
+
+select.ng-invalid.ng-touched {
+	border-color: red;
+} 
+
+textarea.ng-invalid.ng-touched {
+	border-color: red;
+}
+
+.right {
+	text-align: right;
+}
+
+.has-error {
+	color: red;
 }

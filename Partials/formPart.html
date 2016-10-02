@@ -1,4 +1,4 @@
-<form>
+<form name="wsRegForm">
 	<div class="form-header">
 		<div class="row">
 			<h4 class="col-2">Workshop Registration</h4>
@@ -17,75 +17,99 @@
 		<div class="wrapper">
 			<div class="row">
 				<div class="col-6 left-column">
-					<div class="row">
+					<div class="row form-group">
 						<label class="col-6 label">First Name <span class="asterReq">*</span></label>
-						<input class="col-6" type="text" />
+						<input novalidation class="col-6" name="firstName" type="text" ng-model="wsReg.firstName" ng-required="true" />
+						<div ng-show="wsRegForm.firstName.$error.required && wsRegForm.firstName.$touched" class="right">
+							<small class="has-error">This field is required!</small>
+						</div>
 					</div>
-					<div class="row">
+					<div class="row form-group">
 						<label class="col-6 label">Last Name <span class="asterReq">*</span></label>
-						<input class="col-6" type="text" />
+						<input novalidation class="col-6" name="lastName" type="text" ng-model="wsReg.lastName" ng-required="true"/>
+						<div ng-show="wsRegForm.lastName.$error.required && wsRegForm.lastName.$touched" class="right">
+							<small class="has-error">This field is required!</small>
+						</div>
 					</div>
-					<div class="row">
+					<div class="row form-group">
 						<label class="col-6 label">Company/Institution <span class="asterReq">*</span></label>
-						<input class="col-6" type="text" />
+						<input novalidation class="col-6" name="company" type="text" ng-model="wsReg.company" ng-required="true"/>
+						<div ng-show="wsRegForm.company.$error.required && wsRegForm.company.$touched" class="right">
+							<small class="has-error">This field is required!</small>
+						</div>
 					</div>
-					<div class="row">
+					<div class="row form-group">
 						<label class="col-6 label address">Address <span class="asterReq">*</span></label>
-						<textarea class="col-6" rows="5"></textarea>
+						<textarea novalidation class="col-6" name="address" rows="5" ng-model="wsReg.address" ng-required="true"></textarea>
+						<div ng-show="wsRegForm.address.$error.required && wsRegForm.address.$touched" class="right">
+							<small class="has-error">This field is required!</small>
+						</div>
 					</div>
-					<div class="row">
+					<div class="row form-group">
 						<label class="col-6 label">City</label>
-						<input class="col-6" type="text" />
+						<input class="col-6" type="text" ng-model="wsReg.city" />
 					</div>
-					<div class="row">
+					<div class="row form-group">
 						<label class="col-6 label">State / Province / Region</label>
 						<select class="col-6" ng-model="wsReg.state" ng-options="s for s in stateList">
 							<option>-Select-</option>
 						</select>								
 					</div>
-					<div class="row">
-						<label class="col-6 label">Country <span class="asterReq">*</span></label>
+					<div class="row form-group">
+						<label class="col-6 label">Country</label>
 						<select class="col-6" ng-model="wsReg.country" ng-options="c for c in countryList" ng-change="loadStates()">
 							<option>-Select-</option>
 						</select>								
 					</div>
-					<div class="row">
+					<div class="row form-group">
 						<label class="col-6 label">Email <span class="asterReq">*</span></label>
-						<input class="col-6" type="email" />
+						<input novalidation class="col-6" name="email" type="email" ng-model="wsReg.email" ng-required="true" />
+						<div ng-show="wsRegForm.email.$error.required && wsRegForm.email.$touched" class="right">
+							<small class="has-error">This field is required!</small>
+						</div>
+						<div ng-show="wsRegForm.email.$error.email && wsRegForm.email.$touched" class="right">
+							<small class="has-error">Invalid email address!</small>
+						</div>
 					</div>
-					<div class="row">
+					<div class="row form-group">
 						<label class="col-6 label">Phone Number <span class="asterReq">*</span></label>
-						<input class="col-6" type="text" />
+						<input novalidation class="col-6" name="phoneNumber" type="number" ng-model="wsReg.phoneNumber" ng-required="true"/>
+						<div ng-show="wsRegForm.phoneNumber.$error.required && wsRegForm.phoneNumber.$touched" class="right">
+							<small class="has-error">This field is required!</small>
+						</div>
+						<div ng-show="wsRegForm.phoneNumber.$error.number && wsRegForm.phoneNumber.$touched" class="right">
+							<small class="has-error">This field must contain numbers only!</small>
+						</div>
 					</div>
 				</div>
 				<div class="col-6 right-column">
 					<div class="underlined">Lunch</div>
-					<div class="row">
+					<div class="row form-group">
 						<label class="col-6 label">Meal Preference</label>
 						<select class="col-6" ng-model="wsReg.mealPref" ng-options="mf for mf in mealPrefList">
 							<option>-Select-</option>
 						</select>								
 					</div>
 					<div class="underlined">Payment Details</div>
-					<div class="row">
+					<div class="row form-group">
 						<label class="col-6 label payment-mode">Payment Mode</label>
 						<div class="col-6 cbGroup">
-							<input type="checkbox">Cash<br>
-							<input type="checkbox">Cheque<br>
-							<input type="checkbox">Demand Draft<br>
+							<input type="checkbox" value="cash" ng-model="wsReg.paymentDetails.cash">Cash<br>
+							<input type="checkbox" value="cheque" ng-model="wsReg.paymentDetails.cheque">Cheque<br>
+							<input type="checkbox" value="demandDraft" ng-model="wsReg.paymentDetails.demandDraft">Demand Draft<br>
 						</div>								
 					</div>
-					<div class="row">
+					<div class="row form-group">
 						<label class="col-6 label">DD/Cheque No.</label>
-						<input class="col-6" type="text" />								
+						<input class="col-6" type="text" ng-model="wsReg.cheque"/>								
 					</div>
-					<div class="row">
+					<div class="row form-group">
 						<label class="col-6 label">Drawn On (Bank Name)</label>
-						<input class="col-6" type="text" />								
+						<input class="col-6" type="text" ng-model="wsReg.drawnOn"/>								
 					</div>
-					<div class="row">
+					<div class="row form-group">
 						<label class="col-6 label">Payable at</label>
-						<input class="col-6" type="text" />								
+						<input class="col-6" type="text" ng-model="wsReg.payableAt"/>								
 					</div>
 				</div>
 			</div>					
@@ -93,8 +117,8 @@
 	</div>
 	<div class="form-footer">
 		<div class="row">
-			<div class="col-6"><button class="button" ng-click="submit()">Submit</button></div>
-			<div class="col-6"><button class="button">Reset</button></div>				
+			<div class="col-6"><button class="button" ng-click="submit(wsRegForm.$valid)">Submit</button></div>
+			<div class="col-6"><button class="button" ng-click="resetForm()">Reset</button></div>				
 		</div>
 	</div>
 </form>
