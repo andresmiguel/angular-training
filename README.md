@@ -1,6 +1,3 @@
 # angular-training
-The Workshop Registration form is done.
-The More Actions dropdown menu now appears on the hover event of the element. This behavior will be changed with angularJS.
-AngularJS was added and the navigation with ui-router.
-The form validation was added.
-The Confirmation screen was added, but it doesn't load the form data yet.
+The AngularJS Training is complete.
+It was tested in IE11, Google Chrome 53 and Firefox 44.
