@@ -1,10 +1,11 @@
-angular.module('angularTrainingApp').controller('FormCtrl', ['$scope', '$location', 'CountryService', 'MealPrefService',
-	function ($scope, $location, CountryService, MealPrefService){
+angular.module('angularTrainingApp').controller('FormCtrl', ['$scope', '$location', 'CountryService', 'MealPrefService', 'WSRegistrationService',
+	function ($scope, $location, CountryService, MealPrefService, WSRegistrationService){
 
 		initCtrl()
 
 		$scope.submit = function (valid) {
 			if (valid) {
+				WSRegistrationService.setRegistration($scope.wsReg)				
 				$location.path("/confirmation")
 			}			
 		}

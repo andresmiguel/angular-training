@@ -1,2 +1,63 @@
-<h1>Here goes the Confirmation</h1>
-<a href="home.html">Go Back</a>
+<div class="container">
+	<h2>Workshop Registration Data</h2>
+	<div class="row data-item">
+		<div class="col-4">First Name: </div>
+		<div class="col-8">{{wsReg.firstName}}</div>
+	</div>
+	<div class="row data-item">
+		<div class="col-4">Last Name: </div>
+		<div class="col-8">{{wsReg.lastName}}</div>
+	</div>
+	<div class="row data-item">
+		<div class="col-4">Company/Institution: </div>
+		<div class="col-8">{{wsReg.company}}</div>
+	</div>
+	<div class="row data-item">
+		<div class="col-4">Address: </div>
+		<div class="col-8">{{wsReg.address}}</div>
+	</div>
+	<div class="row data-item">
+		<div class="col-4">City: </div>
+		<div class="col-8">{{wsReg.city}}</div>
+	</div>
+	<div class="row data-item">
+		<div class="col-4">State / Province / Region: </div>
+		<div class="col-8">{{wsReg.state}}</div>
+	</div>
+	<div class="row data-item">
+		<div class="col-4">Country: </div>
+		<div class="col-8">{{wsReg.country}}</div>
+	</div>
+	<div class="row data-item">
+		<div class="col-4">Email: </div>
+		<div class="col-8">{{wsReg.email}}</div>
+	</div>
+	<div class="row data-item">
+		<div class="col-4">Phone Number: </div>
+		<div class="col-8">{{wsReg.phoneNumber}}</div>
+	</div>
+	<div class="row data-item">
+		<div class="col-4">Meal Preference: </div>
+		<div class="col-8">{{wsReg.mealPref}}</div>
+	</div>
+	<div class="row data-item">
+		<div class="col-4">Payment Mode: </div>
+		<div class="col-8">
+			<div ng-show="wsReg.paymentDetails.cash">Cash</div>
+			<div ng-show="wsReg.paymentDetails.cheque">Cheque</div>
+			<div ng-show="wsReg.paymentDetails.demandDraft">Demand Draft</div>
+		</div>
+	</div>
+	<div class="row data-item">
+		<div class="col-4">DD/Cheque No.: </div>
+		<div class="col-8">{{wsReg.cheque}}</div>
+	</div>
+	<div class="row data-item">
+		<div class="col-4">Drawn On (Bank Name): </div>
+		<div class="col-8">{{wsReg.drawnOn}}</div>
+	</div>
+	<div class="row data-item">
+		<div class="col-4">Payable at: </div>
+		<div class="col-8">{{wsReg.payableAt}}</div>
+	</div>
+</div>

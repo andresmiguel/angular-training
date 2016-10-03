@@ -1,5 +1,5 @@
-angular.module('angularTrainingApp').controller('ConfirmationCtrl', ['$scope',
-	function ($scope){
+angular.module('angularTrainingApp').controller('ConfirmationCtrl', ['$scope', 'WSRegistrationService',
+	function ($scope, WSRegistrationService){
 
-		console.log("working")
+		$scope.wsReg = WSRegistrationService.getRegistration()
 	}])
