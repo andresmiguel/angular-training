@@ -1,4 +1,4 @@
-var angularTrainingApp = angular.module('angularTrainingApp', ['ui.router', 'angularTrainingApp.services'])
+var angularTrainingApp = angular.module('angularTrainingApp', ['ui.router', 'ngAnimate', 'angularTrainingApp.services'])
 
 angularTrainingApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 	
