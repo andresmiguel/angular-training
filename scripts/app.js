@@ -17,6 +17,11 @@ angularTrainingApp.config(['$stateProvider', '$urlRouterProvider', function ($st
 			templateUrl: 'Partials/confirmationPart.html',
 			controller: 'ConfirmationCtrl'
 		})
+		.state('info', 
+		{
+			url: '/info',
+			templateUrl: 'Partials/infoPart.html'			
+		})
 }])
 
 // create angularTrainingApp.services module

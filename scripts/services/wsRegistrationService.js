@@ -1,5 +1,5 @@
 angular.module('angularTrainingApp.services')
-	.factory('WSRegistrationService', [function (){
+	.factory('WSRegistrationService', ['$http' , function ($http){
 
 		var wsRegistration = {}
 		var edit = false
@@ -25,12 +25,17 @@ angular.module('angularTrainingApp.services')
 			return edit
 		}
 
+		var sendRegistration = function () {
+			return $http.get('data/server-response.json')
+		}
+
 		return {
 			getRegistration: getRegistration,
 			setRegistration: setRegistration,
 			doEdit: doEdit,
 			undoEdit: undoEdit,
-			edit: edit
+			edit: edit,
+			sendRegistration: sendRegistration
 		}
 
 	}])
