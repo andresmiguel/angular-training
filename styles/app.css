@@ -190,7 +190,20 @@ textarea.ng-invalid.ng-touched {
 
 .container {
 	width: 80%;
-	margin: auto;	
+	margin: auto;
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.ng-enter {
+	animation: 1s appear;
 }
 
 .data-item {
