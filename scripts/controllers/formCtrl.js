@@ -1,5 +1,5 @@
-angular.module('angularTrainingApp').controller('FormCtrl', ['$scope', '$location', 'CountryService', 'MealPrefService', 'WSRegistrationService',
-	function ($scope, $location, CountryService, MealPrefService, WSRegistrationService){
+angular.module('angularTrainingApp').controller('FormCtrl', ['$scope', '$location', '$translate', 'CountryService', 'MealPrefService', 'WSRegistrationService',
+	function ($scope, $location, $translate, CountryService, MealPrefService, WSRegistrationService){
 
 		initCtrl()
 
@@ -14,7 +14,35 @@ angular.module('angularTrainingApp').controller('FormCtrl', ['$scope', '$locatio
 			initCtrl()
 		}
 
+		$scope.showMoreActions = function () {
+			$scope.moreActions = true
+		}
+
+		$scope.hideMoreActions = function () {
+			$scope.moreActions = false
+		}
+
+		$scope.changeLang = function () {
+			if ($scope.translateTo === 'EN') {
+				$translate.use('en')
+			} else {
+				$translate.use('es')
+			}
+
+			showTranslateToLang()
+		}
+
+		function showTranslateToLang () {
+			if ($translate.use() === 'en') {
+				$scope.translateTo = 'ES'
+			} else {
+				$scope.translateTo = 'EN'
+			}
+		}
+
 		function initCtrl() {
+			$scope.moreActions = false
+			showTranslateToLang()
 			var edit = WSRegistrationService.edit()
 
 			$scope.wsReg = {}			

@@ -164,7 +164,7 @@ input, select, textarea {
 
 .dropdown-content a:hover {background-color: #60aa99;}
 
-.dropdown:hover .dropdown-content {
+.dropdown .dropdown-content {
     display: block;
 }
 

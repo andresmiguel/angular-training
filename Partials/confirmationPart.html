@@ -1,67 +1,67 @@
 <div class="container">
-	<h2>Workshop Registration Data</h2>
+	<h2>{{ 'WS_REGISTRATION_DATA' | translate }}</h2>
 	<div class="row data-item">
-		<div class="col-4">First Name: </div>
+		<div class="col-4">{{ 'FIRST_NAME' | translate }}: </div>
 		<div class="col-8">{{wsReg.firstName}}</div>
 	</div>
 	<div class="row data-item">
-		<div class="col-4">Last Name: </div>
+		<div class="col-4">{{ 'LAST_NAME' | translate }}: </div>
 		<div class="col-8">{{wsReg.lastName}}</div>
 	</div>
 	<div class="row data-item">
-		<div class="col-4">Company/Institution: </div>
+		<div class="col-4">{{ 'COMPANY' | translate }}: </div>
 		<div class="col-8">{{wsReg.company}}</div>
 	</div>
 	<div class="row data-item">
-		<div class="col-4">Address: </div>
+		<div class="col-4">{{ 'ADDRESS' | translate }}: </div>
 		<div class="col-8">{{wsReg.address}}</div>
 	</div>
 	<div class="row data-item">
-		<div class="col-4">City: </div>
+		<div class="col-4">{{ 'CITY' | translate }}: </div>
 		<div class="col-8">{{wsReg.city}}</div>
 	</div>
 	<div class="row data-item">
-		<div class="col-4">State / Province / Region: </div>
+		<div class="col-4">{{ 'STATE' | translate }}: </div>
 		<div class="col-8">{{wsReg.state}}</div>
 	</div>
 	<div class="row data-item">
-		<div class="col-4">Country: </div>
+		<div class="col-4">{{ 'COUNTRY' | translate }}: </div>
 		<div class="col-8">{{wsReg.country}}</div>
 	</div>
 	<div class="row data-item">
-		<div class="col-4">Email: </div>
+		<div class="col-4">{{ 'EMAIL' | translate }}: </div>
 		<div class="col-8">{{wsReg.email}}</div>
 	</div>
 	<div class="row data-item">
-		<div class="col-4">Phone Number: </div>
+		<div class="col-4">{{ 'PHONE_NUMBER' | translate }}: </div>
 		<div class="col-8">{{wsReg.phoneNumber}}</div>
 	</div>
 	<div class="row data-item">
-		<div class="col-4">Meal Preference: </div>
+		<div class="col-4">{{ 'MEAL_PREFERENCE' | translate }}: </div>
 		<div class="col-8">{{wsReg.mealPref}}</div>
 	</div>
 	<div class="row data-item">
-		<div class="col-4">Payment Mode: </div>
+		<div class="col-4">{{ 'PAYMENT_MODE' | translate }}: </div>
 		<div class="col-8">
-			<div ng-show="wsReg.paymentDetails.cash">Cash</div>
-			<div ng-show="wsReg.paymentDetails.cheque">Cheque</div>
-			<div ng-show="wsReg.paymentDetails.demandDraft">Demand Draft</div>
+			<div ng-show="wsReg.paymentDetails.cash">{{ 'CASH' | translate }}</div>
+			<div ng-show="wsReg.paymentDetails.cheque">{{ 'CHEQUE' | translate }}</div>
+			<div ng-show="wsReg.paymentDetails.demandDraft">{{ 'DEMAND_DRAFT' | translate }}</div>
 		</div>
 	</div>
 	<div class="row data-item">
-		<div class="col-4">DD/Cheque No.: </div>
+		<div class="col-4">{{ 'CHEQUE_NO' | translate }}: </div>
 		<div class="col-8">{{wsReg.cheque}}</div>
 	</div>
 	<div class="row data-item">
-		<div class="col-4">Drawn On (Bank Name): </div>
+		<div class="col-4">{{ 'DRAWN_ON' | translate }}: </div>
 		<div class="col-8">{{wsReg.drawnOn}}</div>
 	</div>
 	<div class="row data-item">
-		<div class="col-4">Payable at: </div>
+		<div class="col-4">{{ 'PAYABLE_AT' | translate }}: </div>
 		<div class="col-8">{{wsReg.payableAt}}</div>
 	</div>
 	<div class="row">
-		<button class="button" ng-click="goBack()">Back</button>
-		<button class="button" ng-click="confirm()">Confirm</button>
+		<button class="button" ng-click="goBack()">{{ 'BACK' | translate }}</button>
+		<button class="button" ng-click="confirm()">{{ 'CONFIRM' | translate }}</button>
 	</div>
 </div>
