@@ -1,5 +1,15 @@
-angular.module('angularTrainingApp').controller('ConfirmationCtrl', ['$scope', 'WSRegistrationService',
-	function ($scope, WSRegistrationService){
+angular.module('angularTrainingApp').controller('ConfirmationCtrl', ['$scope', '$location', 'WSRegistrationService',
+	function ($scope, $location, WSRegistrationService){
 
-		$scope.wsReg = WSRegistrationService.getRegistration()
+		initCtrl()
+
+		$scope.goBack = function () {
+			WSRegistrationService.doEdit()
+			$location.path('/')
+		}
+
+		function initCtrl() {
+			$scope.wsReg = WSRegistrationService.getRegistration()	
+		}
+		
 	}])

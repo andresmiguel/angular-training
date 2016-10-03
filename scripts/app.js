@@ -5,25 +5,17 @@ angularTrainingApp.config(['$stateProvider', '$urlRouterProvider', function ($st
 	$urlRouterProvider.otherwise('/')
 
 	$stateProvider
-		.state('app', 
+		.state('home', 
 		{
 			url: '/',
-			views: {				
-				'content': {
-					controller: 'FormCtrl',
-					templateUrl: 'Partials/formPart.html'
-				}
-			}
+			templateUrl: 'Partials/formPart.html',
+			controller: 'FormCtrl'
 		})
-		.state('app.confirmation', 
+		.state('confirmation', 
 		{
-			url: 'confirmation',
-			views: {
-				'content@': {
-					controller: 'ConfirmationCtrl',
-					templateUrl: 'Partials/confirmationPart.html'
-				}
-			}
+			url: '/confirmation',
+			templateUrl: 'Partials/confirmationPart.html',
+			controller: 'ConfirmationCtrl'
 		})
 }])
 
