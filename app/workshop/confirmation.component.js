@@ -4,6 +4,13 @@
     angular.module('app.workshop')
         .component('confirmation', confirmation());
 
+    function confirmation () {
+        return {
+            templateUrl: 'app/workshop/confirmation.html',
+            controller: controller
+        }
+    }
+
     controller.$inject = ['$location', 'wsRegistrationService'];
     function controller ($location, wsRegistrationService) {
         var vm = this;
@@ -33,10 +40,4 @@
         }
     }
 
-    function confirmation () {
-        return {
-            templateUrl: 'app/workshop/confirmation.html',
-            controller: controller
-        }
-    }
 })();

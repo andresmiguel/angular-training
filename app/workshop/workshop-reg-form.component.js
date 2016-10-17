@@ -4,6 +4,13 @@
     angular.module('app.workshop')
         .component('workshopRegForm', workshopRegForm());
 
+    function workshopRegForm() {
+        return {
+            templateUrl: 'app/workshop/workshop-reg-form.html',
+            controller: controller
+        }
+    }
+
     controller.$inject = ['$location', '$translate', 'countryService', 'mealPrefsService', 'wsRegistrationService'];
     function controller($location, $translate, countryService, mealPrefsService, wsRegistrationService) {
 
@@ -102,16 +109,6 @@
             }
         }
 
-    }
-
-    function workshopRegForm() {
-        return {
-            templateUrl: 'app/workshop/workshop-reg-form.html',
-            bindings: {
-                wsRegObj: '<'
-            },
-            controller: controller
-        }
     }
 
 })();
