@@ -1,0 +1,67 @@
+<div class="container">
+    <h2>{{ 'WS_REGISTRATION_DATA' | translate }}</h2>
+    <div class="row data-item">
+        <div class="col-4">{{ 'FIRST_NAME' | translate }}: </div>
+        <div class="col-8">{{$ctrl.wsReg.firstName}}</div>
+    </div>
+    <div class="row data-item">
+        <div class="col-4">{{ 'LAST_NAME' | translate }}: </div>
+        <div class="col-8">{{$ctrl.wsReg.lastName}}</div>
+    </div>
+    <div class="row data-item">
+        <div class="col-4">{{ 'COMPANY' | translate }}: </div>
+        <div class="col-8">{{$ctrl.wsReg.company}}</div>
+    </div>
+    <div class="row data-item">
+        <div class="col-4">{{ 'ADDRESS' | translate }}: </div>
+        <div class="col-8">{{$ctrl.wsReg.address}}</div>
+    </div>
+    <div class="row data-item">
+        <div class="col-4">{{ 'CITY' | translate }}: </div>
+        <div class="col-8">{{$ctrl.wsReg.city}}</div>
+    </div>
+    <div class="row data-item">
+        <div class="col-4">{{ 'STATE' | translate }}: </div>
+        <div class="col-8">{{$ctrl.wsReg.state}}</div>
+    </div>
+    <div class="row data-item">
+        <div class="col-4">{{ 'COUNTRY' | translate }}: </div>
+        <div class="col-8">{{$ctrl.wsReg.country}}</div>
+    </div>
+    <div class="row data-item">
+        <div class="col-4">{{ 'EMAIL' | translate }}: </div>
+        <div class="col-8">{{$ctrl.wsReg.email}}</div>
+    </div>
+    <div class="row data-item">
+        <div class="col-4">{{ 'PHONE_NUMBER' | translate }}: </div>
+        <div class="col-8">{{$ctrl.wsReg.phoneNumber}}</div>
+    </div>
+    <div class="row data-item">
+        <div class="col-4">{{ 'MEAL_PREFERENCE' | translate }}: </div>
+        <div class="col-8">{{$ctrl.wsReg.mealPref}}</div>
+    </div>
+    <div class="row data-item">
+        <div class="col-4">{{ 'PAYMENT_MODE' | translate }}: </div>
+        <div class="col-8">
+            <spam ng-show="$ctrl.wsReg.paymentDetails.cash">{{ 'CASH' | translate }}<br></spam>
+            <spam ng-show="$ctrl.wsReg.paymentDetails.cheque">{{ 'CHEQUE' | translate }}<br></spam>
+            <spam ng-show="$ctrl.wsReg.paymentDetails.demandDraft">{{ 'DEMAND_DRAFT' | translate }}<br></spam>
+        </div>
+    </div>
+    <div class="row data-item">
+        <div class="col-4">{{ 'CHEQUE_NO' | translate }}: </div>
+        <div class="col-8">{{$ctrl.wsReg.cheque}}</div>
+    </div>
+    <div class="row data-item">
+        <div class="col-4">{{ 'DRAWN_ON' | translate }}: </div>
+        <div class="col-8">{{$ctrl.wsReg.drawnOn}}</div>
+    </div>
+    <div class="row data-item">
+        <div class="col-4">{{ 'PAYABLE_AT' | translate }}: </div>
+        <div class="col-8">{{$ctrl.wsReg.payableAt}}</div>
+    </div>
+    <div class="row">
+        <button class="button" ng-click="$ctrl.goBack()">{{ 'BACK' | translate }}</button>
+        <button class="button" ng-click="$ctrl.confirm()">{{ 'CONFIRM' | translate }}</button>
+    </div>
+</div>
