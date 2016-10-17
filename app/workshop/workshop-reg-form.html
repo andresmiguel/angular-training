@@ -1,0 +1,124 @@
+<form name="wsRegForm" novalidate>
+    <div class="form-header">
+        <div class="row">
+            <h4 class="col-2">{{ 'WS_REGISTRATION' | translate }}</h4>
+            <div class="col-2">
+                <div class="dropdown" ng-mouseleave="$ctrl.hideMoreActions()">
+                    <button ng-click="$ctrl.showMoreActions()" class="dropbtn">{{ 'MORE_ACTIONS' | translate }} &#x25bc;</button>
+                    <div class="dropdown-content" ng-show="$ctrl.moreActions">
+                        <a ng-click="$ctrl.changeLang()" href="">{{ 'CHANGE_LANGUAGE_TO' | translate }} {{ $ctrl.translateTo }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-body">
+        <div class="underlined">{{ 'REGISTER_NOW_MSG' | translate }}</div>
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-6 left-column">
+                    <div class="row form-group">
+                        <label class="col-6 label">{{ 'FIRST_NAME' | translate }} <span class="asterReq">*</span></label>
+                        <input class="col-6" name="firstName" type="text" ng-model="$ctrl.wsReg.firstName" ng-required="true" />
+                        <div ng-show="wsRegForm.firstName.$error.required && wsRegForm.firstName.$touched" class="right">
+                            <small class="has-error">This field is required!</small>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-6 label">{{ 'LAST_NAME' | translate }} <span class="asterReq">*</span></label>
+                        <input class="col-6" name="lastName" type="text" ng-model="$ctrl.wsReg.lastName" ng-required="true"/>
+                        <div ng-show="wsRegForm.lastName.$error.required && wsRegForm.lastName.$touched" class="right">
+                            <small class="has-error">This field is required!</small>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-6 label">{{ 'COMPANY' | translate }} <span class="asterReq">*</span></label>
+                        <input class="col-6" name="company" type="text" ng-model="$ctrl.wsReg.company" ng-required="true"/>
+                        <div ng-show="wsRegForm.company.$error.required && wsRegForm.company.$touched" class="right">
+                            <small class="has-error">This field is required!</small>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-6 label address">{{ 'ADDRESS' | translate }} <span class="asterReq">*</span></label>
+                        <textarea class="col-6" name="address" rows="5" ng-model="$ctrl.wsReg.address" ng-required="true"></textarea>
+                        <div ng-show="wsRegForm.address.$error.required && wsRegForm.address.$touched" class="right">
+                            <small class="has-error">This field is required!</small>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-6 label">{{ 'CITY' | translate }}</label>
+                        <input class="col-6" type="text" ng-model="$ctrl.wsReg.city" />
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-6 label">{{ 'STATE' | translate }}</label>
+                        <select class="col-6" ng-model="$ctrl.wsReg.state" ng-options="s for s in $ctrl.stateList">
+                            <option>-Select-</option>
+                        </select>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-6 label">{{ 'COUNTRY' | translate }}</label>
+                        <select class="col-6" ng-model="$ctrl.wsReg.country" ng-options="c for c in $ctrl.countryList" ng-change="$ctrl.loadStates()">
+                            <option>-Select-</option>
+                        </select>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-6 label">{{ 'EMAIL' | translate }} <span class="asterReq">*</span></label>
+                        <input class="col-6" name="email" type="email" ng-model="$ctrl.wsReg.email" ng-required="true" />
+                        <div ng-show="wsRegForm.email.$error.required && wsRegForm.email.$touched" class="right">
+                            <small class="has-error">This field is required!</small>
+                        </div>
+                        <div ng-show="wsRegForm.email.$error.email && wsRegForm.email.$touched" class="right">
+                            <small class="has-error">Invalid email address!</small>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-6 label">{{ 'PHONE_NUMBER' | translate }} <span class="asterReq">*</span></label>
+                        <input class="col-6" name="phoneNumber" type="number" ng-model="$ctrl.wsReg.phoneNumber" ng-required="true"/>
+                        <div ng-show="wsRegForm.phoneNumber.$error.required && wsRegForm.phoneNumber.$touched" class="right">
+                            <small class="has-error">This field is required!</small>
+                        </div>
+                        <div ng-show="wsRegForm.phoneNumber.$error.number && wsRegForm.phoneNumber.$touched" class="right">
+                            <small class="has-error">This field must contain numbers only!</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 right-column">
+                    <div class="underlined">{{ 'LUNCH' | translate }}</div>
+                    <div class="row form-group">
+                        <label class="col-6 label">{{ 'MEAL_PREFERENCE' | translate }}</label>
+                        <select class="col-6" ng-model="$ctrl.wsReg.mealPref" ng-options="mf for mf in $ctrl.mealPrefList">
+                            <option>-Select-</option>
+                        </select>
+                    </div>
+                    <div class="underlined">{{ 'PAYMENT_DETAILS' | translate }}</div>
+                    <div class="row form-group">
+                        <label class="col-6 label payment-mode">{{ 'PAYMENT_MODE' | translate }}</label>
+                        <div class="col-6 cbGroup">
+                            <input type="checkbox" value="cash" ng-model="$ctrl.wsReg.paymentDetails.cash">{{ 'CASH' | translate }}<br>
+                            <input type="checkbox" value="cheque" ng-model="$ctrl.wsReg.paymentDetails.cheque">{{ 'CHEQUE' | translate }}<br>
+                            <input type="checkbox" value="demandDraft" ng-model="$ctrl.wsReg.paymentDetails.demandDraft">{{ 'DEMAND_DRAFT' | translate }}<br>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-6 label">{{ 'CHEQUE_NO' | translate }}</label>
+                        <input class="col-6" type="text" ng-model="$ctrl.wsReg.cheque"/>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-6 label">{{ 'DRAWN_ON' | translate }}</label>
+                        <input class="col-6" type="text" ng-model="$ctrl.wsReg.drawnOn"/>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-6 label">{{ 'PAYABLE_AT' | translate }}</label>
+                        <input class="col-6" type="text" ng-model="$ctrl.wsReg.payableAt"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-footer">
+        <div class="row">
+            <div class="col-6"><button class="button" ng-click="$ctrl.submit(wsRegForm.$valid)">{{ 'SUBMIT' | translate }}</button></div>
+            <div class="col-6"><button class="button" ng-click="$ctrl.resetForm()">{{ 'RESET' | translate }}</button></div>
+        </div>
+    </div>
+</form>
