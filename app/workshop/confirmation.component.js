@@ -22,11 +22,11 @@
         }
 
         function confirm () {
-            wsRegistrationService.sendRegistration().success(function (data) {
+            wsRegistrationService.sendRegistration().then(function (data) {
                 if (angular.equals(vm.wsReg, {})) {
                     alert ("There is no data to send to the server!\nYou will be redirected to the Registration Form!");
                     $location.path('/');
-                }else if (data.success === "true") {
+                }else if (data.data.success == true) {
                     $location.path('/info');
                 }
             });

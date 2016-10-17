@@ -19,12 +19,12 @@
         };
 
         function getRegistration () {
-            return angular.copy(wsRegistration);
+            return angular.copy(wsRegistration)
         }
 
         function setRegistration (wsReg) {
             undoEdit();
-            wsRegistration = angular.copy(wsReg);
+            wsRegistration = angular.copy(wsReg)
         }
 
         function doEdit () {
@@ -40,7 +40,9 @@
         }
 
         function sendRegistration () {
-            return $http.get('app/workshop/mock-data/server-response.json');
+            return $http.get('app/workshop/mock-data/server-response.json').success(function (data) {
+                return data;
+            });
         }
     }
 })();

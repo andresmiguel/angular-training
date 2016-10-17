@@ -29,16 +29,16 @@
             var edit = wsRegistrationService.edit();
             vm.wsReg = {};
             vm.states = [];
-            var countryPromise = countryService.getAll().success(function (data) {
-                vm.countryList = data.countries;
-                vm.states = data.states;
+            var countryPromise = countryService.getAll().then(function (data) {
+                vm.countryList = data.data.countries;
+                vm.states = data.data.states;
                 vm.wsReg.country = vm.countryList[0];
                 if (edit !== true) {
                     loadStates();
                 }
             });
-            var mealPromise = mealPrefsService.getAll().success(function (data) {
-                vm.mealPrefList = data;
+            var mealPromise = mealPrefsService.getAll().then(function (data) {
+                vm.mealPrefList = data.data;
                 vm.wsReg.mealPref = vm.mealPrefList[0];
             });
 

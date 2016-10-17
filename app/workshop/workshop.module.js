@@ -56,7 +56,8 @@
                 WS_REGISTRATION_DATA: 'Workshop Registration Data',
                 BACK: 'Back',
                 CONFIRM: 'Confirm',
-                CONGRATULATIONS: 'Congratulations, your data has been sent successfully!!!'
+                CONGRATULATIONS: 'Congratulations, your data has been sent successfully!!!',
+                RETURN_TO_FORM: 'Return to Form'
             })
             .translations('es', {
                 WS_REGISTRATION : 'Registro de Taller',
@@ -87,7 +88,8 @@
                 WS_REGISTRATION_DATA: 'Datos del Registro de Taller',
                 BACK: 'Atras',
                 CONFIRM: 'Confirmar',
-                CONGRATULATIONS: 'Felicidades, sus datos han sido enviados satisfactoriamente!!!'
+                CONGRATULATIONS: 'Felicidades, sus datos han sido enviados satisfactoriamente!!!',
+                RETURN_TO_FORM: 'Volver al Formulario'
             });
 
         $translateProvider.preferredLanguage('en');

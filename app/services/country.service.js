@@ -12,7 +12,9 @@
         };
 
         function getCountries () {
-            return $http.get('app/services/countries.json')
+            return $http.get('app/services/countries.json').success(function (data) {
+               return data;
+            });
         }
     }
 })();
