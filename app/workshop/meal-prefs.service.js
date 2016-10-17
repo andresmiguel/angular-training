@@ -11,7 +11,7 @@
         };
 
         function getMealPref () {
-            return $http.get('app/workshop/meal-prefs.json')
+            return $http.get('app/workshop/mock-data/meal-prefs.json')
         }
     }
 })();

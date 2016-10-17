@@ -40,7 +40,7 @@
         }
 
         function sendRegistration () {
-            return $http.get('app/workshop/server-response.json');
+            return $http.get('app/workshop/mock-data/server-response.json');
         }
     }
 })();
