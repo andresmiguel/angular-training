@@ -48,11 +48,13 @@
             });
 
             if (edit === true) {
+                vm.wsReg = wsRegistrationService.getRegistration();
+                var currCountry = vm.wsReg.country;
                 var promises = [];
                 promises.push(countryPromise);
                 promises.push(mealPromise);
                 $q.all(promises).then(function () {
-                    vm.wsReg = wsRegistrationService.getRegistration();
+                    vm.wsReg.country = currCountry;
                     var currState = vm.wsReg.state;
                     loadStates();
                     vm.wsReg.state = currState;
