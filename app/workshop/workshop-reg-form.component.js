@@ -11,8 +11,8 @@
         }
     }
 
-    controller.$inject = ['$location', '$translate', 'countryService', 'mealPrefsService', 'wsRegistrationService'];
-    function controller($location, $translate, countryService, mealPrefsService, wsRegistrationService) {
+    controller.$inject = ['$location', '$translate', '$q','countryService', 'mealPrefsService', 'wsRegistrationService'];
+    function controller($location, $translate, $q, countryService, mealPrefsService, wsRegistrationService) {
 
         var vm = this;
         vm.moreActions = false;
@@ -53,7 +53,7 @@
                 var promises = new Array();
                 promises.push(countryPromise);
                 promises.push(mealPromise);
-                Promise.all(promises).then(function () {
+                $q.all(promises).then(function () {
                     vm.wsReg = wsRegistrationService.getRegistration();
                     var currState = vm.wsReg.state;
                     loadStates();
