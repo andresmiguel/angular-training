@@ -57,22 +57,25 @@
                 BACK: 'Back',
                 CONFIRM: 'Confirm',
                 CONGRATULATIONS: 'Congratulations, your data has been sent successfully!!!',
-                RETURN_TO_FORM: 'Return to Form'
+                RETURN_TO_FORM: 'Return to Form',
+                ERROR_MSG_REQUIRED: 'This field is required!',
+                ERROR_MSG_INVALID_EMAIL: 'Invalid email address!',
+                ERROR_MSG_ONLY_NUMBERS: 'This field must contain numbers only!'
             })
             .translations('es', {
                 WS_REGISTRATION : 'Registro de Taller',
-                MORE_ACTIONS: 'Mas Acciones',
+                MORE_ACTIONS: 'Más Acciones',
                 CHANGE_LANGUAGE_TO: 'Cambiar lenguaje a',
-                REGISTER_NOW_MSG: 'Registrese ahora mientras existen asientos disponibles!',
+                REGISTER_NOW_MSG: 'Regístrese ahora mientras existen asientos disponibles!',
                 FIRST_NAME: 'Nombre',
                 LAST_NAME: 'Apellido',
-                COMPANY: 'Empresa / Institucion',
-                ADDRESS: 'Direccion',
+                COMPANY: 'Empresa / Institución',
+                ADDRESS: 'Dirección',
                 CITY: 'Ciudad',
-                STATE: 'Estado / Provincia / Region',
-                COUNTRY: 'Pais',
+                STATE: 'Estado / Provincia / Región',
+                COUNTRY: 'País',
                 EMAIL: 'Email',
-                PHONE_NUMBER: 'Numero de Telefono',
+                PHONE_NUMBER: 'Número de Teléfono',
                 LUNCH: 'Almuerzo',
                 MEAL_PREFERENCE: 'Preferencia de comida',
                 PAYMENT_DETAILS: 'Detalles del pago',
@@ -86,10 +89,13 @@
                 SUBMIT: 'Enviar',
                 RESET: 'Limpiar',
                 WS_REGISTRATION_DATA: 'Datos del Registro de Taller',
-                BACK: 'Atras',
+                BACK: 'Atrás',
                 CONFIRM: 'Confirmar',
                 CONGRATULATIONS: 'Felicidades, sus datos han sido enviados satisfactoriamente!!!',
-                RETURN_TO_FORM: 'Volver al Formulario'
+                RETURN_TO_FORM: 'Volver al Formulario',
+                ERROR_MSG_REQUIRED: 'Este campo es requerido!',
+                ERROR_MSG_INVALID_EMAIL: 'Dirección de correo electrónico inválida!',
+                ERROR_MSG_ONLY_NUMBERS: 'Este campo solo puede contener números!'
             });
 
         $translateProvider.preferredLanguage('en');
