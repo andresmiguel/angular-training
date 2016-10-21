@@ -26,11 +26,9 @@
         vm.showTranslateToLang = showTranslateToLang;
         vm.submit = submit;
 
-        activate();
-
         //////////
 
-        function activate() {
+        vm.$onInit = function () {
             vm.moreActions = false;
             showTranslateToLang();
             var edit = wsRegistrationService.edit();
@@ -50,7 +48,7 @@
             });
 
             if (edit === true) {
-                var promises = new Array();
+                var promises = [];
                 promises.push(countryPromise);
                 promises.push(mealPromise);
                 $q.all(promises).then(function () {
@@ -87,7 +85,7 @@
         }
 
         function resetForm() {
-            activate();
+            vm.$onInit();
         }
 
         function showMoreActions() {
