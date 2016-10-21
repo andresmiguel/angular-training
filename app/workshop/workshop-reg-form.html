@@ -117,7 +117,7 @@
     </div>
     <div class="form-footer">
         <div class="row">
-            <div class="col-6"><button class="button" ng-click="$ctrl.submit(wsRegForm.$valid)">{{ 'SUBMIT' | translate }}</button></div>
+            <div class="col-6"><button class="button" ng-click="$ctrl.submit(wsRegForm.$valid)" ng-disabled="wsRegForm.$invalid">{{ 'SUBMIT' | translate }}</button></div>
             <div class="col-6"><button class="button" ng-click="$ctrl.resetForm()">{{ 'RESET' | translate }}</button></div>
         </div>
     </div>
