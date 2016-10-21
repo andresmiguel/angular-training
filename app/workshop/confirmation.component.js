@@ -17,9 +17,9 @@
         vm.confirm = confirm;
         vm.goBack = goBack;
 
-        activate();
+        //////////
 
-        function activate() {
+        vm.$onInit = function () {
             vm.wsReg = wsRegistrationService.getRegistration();
         }
 

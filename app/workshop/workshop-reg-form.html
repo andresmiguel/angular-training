@@ -21,28 +21,28 @@
                         <label class="col-6 label">{{ 'FIRST_NAME' | translate }} <span class="asterReq">*</span></label>
                         <input class="col-6" name="firstName" type="text" ng-model="$ctrl.wsReg.firstName" ng-required="true" />
                         <div ng-show="wsRegForm.firstName.$error.required && wsRegForm.firstName.$touched" class="right">
-                            <small class="has-error">This field is required!</small>
+                            <small class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
                         </div>
                     </div>
                     <div class="row form-group">
                         <label class="col-6 label">{{ 'LAST_NAME' | translate }} <span class="asterReq">*</span></label>
                         <input class="col-6" name="lastName" type="text" ng-model="$ctrl.wsReg.lastName" ng-required="true"/>
                         <div ng-show="wsRegForm.lastName.$error.required && wsRegForm.lastName.$touched" class="right">
-                            <small class="has-error">This field is required!</small>
+                            <small class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
                         </div>
                     </div>
                     <div class="row form-group">
                         <label class="col-6 label">{{ 'COMPANY' | translate }} <span class="asterReq">*</span></label>
                         <input class="col-6" name="company" type="text" ng-model="$ctrl.wsReg.company" ng-required="true"/>
                         <div ng-show="wsRegForm.company.$error.required && wsRegForm.company.$touched" class="right">
-                            <small class="has-error">This field is required!</small>
+                            <small class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
                         </div>
                     </div>
                     <div class="row form-group">
                         <label class="col-6 label address">{{ 'ADDRESS' | translate }} <span class="asterReq">*</span></label>
                         <textarea class="col-6" name="address" rows="5" ng-model="$ctrl.wsReg.address" ng-required="true"></textarea>
                         <div ng-show="wsRegForm.address.$error.required && wsRegForm.address.$touched" class="right">
-                            <small class="has-error">This field is required!</small>
+                            <small class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
                         </div>
                     </div>
                     <div class="row form-group">
@@ -65,20 +65,20 @@
                         <label class="col-6 label">{{ 'EMAIL' | translate }} <span class="asterReq">*</span></label>
                         <input class="col-6" name="email" type="email" ng-model="$ctrl.wsReg.email" ng-required="true" />
                         <div ng-show="wsRegForm.email.$error.required && wsRegForm.email.$touched" class="right">
-                            <small class="has-error">This field is required!</small>
+                            <small class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
                         </div>
                         <div ng-show="wsRegForm.email.$error.email && wsRegForm.email.$touched" class="right">
-                            <small class="has-error">Invalid email address!</small>
+                            <small class="has-error">{{ 'ERROR_MSG_INVALID_EMAIL' | translate }}</small>
                         </div>
                     </div>
                     <div class="row form-group">
                         <label class="col-6 label">{{ 'PHONE_NUMBER' | translate }} <span class="asterReq">*</span></label>
                         <input class="col-6" name="phoneNumber" type="number" ng-model="$ctrl.wsReg.phoneNumber" ng-required="true"/>
                         <div ng-show="wsRegForm.phoneNumber.$error.required && wsRegForm.phoneNumber.$touched" class="right">
-                            <small class="has-error">This field is required!</small>
+                            <small class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
                         </div>
                         <div ng-show="wsRegForm.phoneNumber.$error.number && wsRegForm.phoneNumber.$touched" class="right">
-                            <small class="has-error">This field must contain numbers only!</small>
+                            <small class="has-error">{{ 'ERROR_MSG_ONLY_NUMBERS' | translate }}</small>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
     </div>
     <div class="form-footer">
         <div class="row">
-            <div class="col-6"><button class="button" ng-click="$ctrl.submit(wsRegForm.$valid)">{{ 'SUBMIT' | translate }}</button></div>
+            <div class="col-6"><button class="button" ng-click="$ctrl.submit(wsRegForm.$valid)" ng-disabled="wsRegForm.$invalid">{{ 'SUBMIT' | translate }}</button></div>
             <div class="col-6"><button class="button" ng-click="$ctrl.resetForm()">{{ 'RESET' | translate }}</button></div>
         </div>
     </div>
