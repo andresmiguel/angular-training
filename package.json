@@ -1,0 +1,31 @@
+{
+  "name": "angular-training",
+  "version": "1.0.0",
+  "description": "An angular training application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andresmiguel/angular-training.git"
+  },
+  "keywords": [
+    "angular",
+    "training"
+  ],
+  "author": "Andrés Miguel Bores Hevia <andresmbores@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andresmiguel/angular-training/issues"
+  },
+  "homepage": "https://github.com/andresmiguel/angular-training#readme",
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-translate": "^2.12.1",
+    "angular-ui-router": "^0.3.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
