@@ -1,16 +1,28 @@
 var gulp = require('gulp');
+var sass = require('gulp-sass');
 
-var src = ['node_modules/angular/angular.min.js', 
+var vendor_scripts_src = ['node_modules/angular/angular.min.js', 
 		   'node_modules/angular-animate/angular-animate.min.js', 
 		   'node_modules/angular-translate/dist/angular-translate.min.js',
 		   'node_modules/angular-ui-router/release/angular-ui-router.min.js'];
-var dest = 'vendor';
+var vendor_scripts_dest = 'vendor';
 
 gulp.task('vendor-scripts', function() {
-	return gulp.src(src)
-		.pipe(gulp.dest(dest));
+	console.log('Copying vendor scripts...');
+	return gulp.src(vendor_scripts_src)
+		.pipe(gulp.dest(vendor_scripts_dest));
 });
 
-gulp.task('default', ['vendor-scripts'], function() {
+var css_src = 'scss/**/*.scss';
+var css_dest = '';
+
+gulp.task('sass', function() {
+	console.log('Converting scss to css...');
+	return gulp.src(css_src)
+		.pipe(sass())
+		.pipe(gulp.dest(css_dest));
+});
+
+gulp.task('default', ['vendor-scripts', 'sass'], function() {
 
 });
