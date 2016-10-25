@@ -1,224 +1,179 @@
-html {
-	font-family: "Verdana Sans", sans-serif !important;
-}
-
 * {
-	box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-	display: none !important;
-}
+html {
+  font-family: "Verdana Sans", sans-serif !important; }
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important; }
+
 .row::after {
-	content: "";
-	clear: both;
-	display: block;
-}
+  content: "";
+  clear: both;
+  display: block; }
 
 [class*="col-"] {
-	width: 100%;
-	float: left;
-}
+  width: 100%;
+  float: left; }
 
 div.form-group {
-	margin-bottom: 1em;
-}
+  margin-bottom: 1em; }
 
-div.form-footer div.row {
-	text-align: center;
-	margin: auto;
-}
-
-div.form-footer div.row [class*="col-"] {
-	padding: .2em 0;
-}
+div.form-footer {
+  background-color: #e4e4e4;
+  margin: 0 1px 1px 1px;
+  padding: 5px 0; }
+  div.form-footer div.row {
+    text-align: center;
+    margin: auto; }
+    div.form-footer div.row [class*="col-"] {
+      padding: .2em 0; }
 
 @media only screen and (min-width: 768px) {
-	.col-1 {width: 8.33%;}
-	.col-2 {width: 16.66%;}
-	.col-3 {width: 25%;}
-	.col-4 {width: 33.33%;}
-	.col-5 {width: 41.66%;}
-	.col-6 {width: 50%;}
-	.col-7 {width: 58.33%;}
-	.col-8 {width: 66.66%;}
-	.col-9 {width: 75%;}
-	.col-10 {width: 83.33%;}
-	.col-11 {width: 91.66%;}
-	.col-12 {width: 100%;}
-
-	div.form-group {
-		margin-bottom: 1.4em;
-	}
-
-	.left-column {
-		padding: 0 2em 0 0;
-	}
-	.right-column {
-		padding: 0 .8em 0 2em;
-	}
-
-	div.form-footer div.row :first-child {
-		text-align: right;
-		padding-right: 2px;
-	}
-
-	div.form-footer div.row :last-child {
-		text-align: left;
-		padding-left: 2px;
-	}
-
-	label.address {
-		margin-top: 2.5em;
-		height: 4.7em;
-	}
-
-	label.payment-mode {
-		margin-top: 1.7em;
-		height: 3em;
-	}
-}
+  .col-1 {
+    width: 8.33333%; }
+  .col-2 {
+    width: 16.66667%; }
+  .col-3 {
+    width: 25%; }
+  .col-4 {
+    width: 33.33333%; }
+  .col-5 {
+    width: 41.66667%; }
+  .col-6 {
+    width: 50%; }
+  .col-7 {
+    width: 58.33333%; }
+  .col-8 {
+    width: 66.66667%; }
+  .col-9 {
+    width: 75%; }
+  .col-10 {
+    width: 83.33333%; }
+  .col-11 {
+    width: 91.66667%; }
+  .col-12 {
+    width: 100%; }
+  div.form-group {
+    margin-bottom: 1.4em; }
+  .left-column {
+    padding: 0 2em 0 0; }
+  .right-column {
+    padding: 0 .8em 0 2em; }
+  div.form-footer div.row :first-child {
+    text-align: right;
+    padding-right: 2px; }
+  div.form-footer div.row :last-child {
+    text-align: left;
+    padding-left: 2px; }
+  label.address {
+    margin-top: 2.5em;
+    height: 4.7em; }
+  label.payment-mode {
+    margin-top: 1.7em;
+    height: 3em; } }
 
 .underlined {
-	margin-bottom: 1em;
-	text-decoration: underline;
-}
+  margin-bottom: 1em;
+  text-decoration: underline; }
 
 form {
-	border: 1px solid #8fccbd;
-}
+  border: 1px solid #8fccbd; }
 
 .form-header {
-	background-color: #8fccbd;
-	padding: .5em .3em;
-}
-
-.form-header h4{
-	padding: 0;
-	margin: 0;
-	font-weight: bolder;
-}
+  background-color: #8fccbd;
+  padding: .5em .3em; }
+  .form-header h4 {
+    padding: 0;
+    margin: 0;
+    font-weight: bolder; }
 
 .form-body {
-	padding: .8em .5em;
-}
-
-.form-footer {
-	background-color: #e4e4e4;
-	margin: 0 1px 1px 1px;
-	padding: 5px 0;
-}
+  padding: .8em .5em; }
 
 .button {
-	border: none;
-	color: white;
-	font-weight: bolder;
-	cursor: pointer;
-	text-align: center !important;
-	text-decoration: none;
-	background-color: #60aa99;
-	padding: .3em 0 !important;
-	width: 100px;
-}
+  border: none;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  text-align: center !important;
+  text-decoration: none;
+  background-color: #60aa99;
+  padding: .3em 0 !important;
+  width: 100px; }
 
 span.asterReq {
-	color: red;
-}
+  color: red; }
 
 label.label {
-	font-weight: bold;
-	font-size: .9em;
-}
+  font-weight: bold;
+  font-size: .9em; }
 
 input, select, textarea {
-	border: 1px solid gray;
-}
+  border: 1px solid gray; }
 
 .dropbtn {
-	background-color: #8fccbd;
-	border: none;
-	cursor: pointer;
-	padding: 0;
-}
+  background-color: #8fccbd;
+  border: none;
+  cursor: pointer;
+  padding: 0; }
 
 .dropdown {
-	position: relative;
-	display: inline-block;
-}
+  position: relative;
+  display: inline-block; }
+  .dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: #8fccbd;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    width: 200%; }
+    .dropdown-content a {
+      color: black;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+      font-size: .8em; }
+      .dropdown-content a:hover {
+        background-color: #60aa99; }
 
-.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #8fccbd;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-	width: 200%;
-}
-
-.dropdown-content a {
-	color: black;
-	padding: 10px 14px;
-	text-decoration: none;
-	display: block;
-	font-size: .8em;
-}
-
-.dropdown-content a:hover {background-color: #60aa99;}
-
-.dropdown .dropdown-content {
-	display: block;
-}
-
-input.ng-invalid.ng-touched  {
-	border-color: red;
-}
-
-select.ng-invalid.ng-touched {
-	border-color: red;
-}
-
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched,
 textarea.ng-invalid.ng-touched {
-	border-color: red;
-}
+  border-color: red; }
 
 .right {
-	text-align: right;
-}
+  text-align: right; }
 
 .has-error {
-	color: red;
-}
+  color: red; }
 
 .container {
-	width: 80%;
-	margin: auto;
-}
+  width: 80%;
+  margin: auto; }
 
 @keyframes appear {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 .ng-enter {
-	animation: 1s appear;
-}
+  animation: 1s appear; }
 
-.data-item {
-	background-color:  #f1f1f1;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-	margin-bottom: 2em;
-	border: 1px solid gray;
-	padding: 1em 1em;
-}
-
-div.data-item div:first-child {
-	font-weight: bold;
-}
+div.data-item {
+  background-color: #f1f1f1;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 2em;
+  border: 1px solid gray;
+  padding: 1em 1em; }
+  div.data-item div:first-child {
+    font-weight: bold; }
 
 button[disabled] {
-	opacity: .5;
-	cursor: not-allowed;
-}
+  opacity: .5;
+  cursor: not-allowed; }

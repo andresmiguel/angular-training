@@ -14,7 +14,7 @@ gulp.task('vendor-scripts', function() {
 });
 
 var css_src = 'scss/**/*.scss';
-var css_dest = '';
+var css_dest = 'styles';
 
 gulp.task('sass', function() {
 	console.log('Converting scss to css...');
@@ -25,4 +25,8 @@ gulp.task('sass', function() {
 
 gulp.task('default', ['vendor-scripts', 'sass'], function() {
 
+});
+
+gulp.task('watch', function () {
+	return gulp.watch(css_src, ['sass']);
 });
