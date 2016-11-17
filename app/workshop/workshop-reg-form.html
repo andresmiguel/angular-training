@@ -20,29 +20,29 @@
                     <div class="row form-group">
                         <label class="col-6 label">{{ 'FIRST_NAME' | translate }} <span class="asterReq">*</span></label>
                         <input class="col-6" name="firstName" type="text" ng-model="$ctrl.wsReg.firstName" ng-required="true" />
-                        <div ng-show="wsRegForm.firstName.$error.required && wsRegForm.firstName.$touched" class="right">
-                            <small class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
+                        <div ng-show="!wsRegForm.firstName.$pristine" ng-messages="wsRegForm.firstName.$error" class="right">
+                            <small ng-message="required" class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
                         </div>
                     </div>
                     <div class="row form-group">
                         <label class="col-6 label">{{ 'LAST_NAME' | translate }} <span class="asterReq">*</span></label>
                         <input class="col-6" name="lastName" type="text" ng-model="$ctrl.wsReg.lastName" ng-required="true"/>
-                        <div ng-show="wsRegForm.lastName.$error.required && wsRegForm.lastName.$touched" class="right">
-                            <small class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
+                        <div ng-show="!wsRegForm.lastName.$pristine" ng-messages="wsRegForm.lastName.$error" class="right">
+                            <small ng-message="required" class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
                         </div>
                     </div>
                     <div class="row form-group">
                         <label class="col-6 label">{{ 'COMPANY' | translate }} <span class="asterReq">*</span></label>
                         <input class="col-6" name="company" type="text" ng-model="$ctrl.wsReg.company" ng-required="true"/>
-                        <div ng-show="wsRegForm.company.$error.required && wsRegForm.company.$touched" class="right">
-                            <small class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
+                        <div ng-show="!wsRegForm.company.$pristine" ng-messages="wsRegForm.company.$error" class="right">
+                            <small ng-message="required" class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
                         </div>
                     </div>
                     <div class="row form-group">
                         <label class="col-6 label address">{{ 'ADDRESS' | translate }} <span class="asterReq">*</span></label>
                         <textarea class="col-6" name="address" rows="5" ng-model="$ctrl.wsReg.address" ng-required="true"></textarea>
-                        <div ng-show="wsRegForm.address.$error.required && wsRegForm.address.$touched" class="right">
-                            <small class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
+                        <div ng-show="!wsRegForm.address.$pristine" ng-messages="wsRegForm.address.$error" class="right">
+                            <small ng-message="required" class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
                         </div>
                     </div>
                     <div class="row form-group">
@@ -64,21 +64,17 @@
                     <div class="row form-group">
                         <label class="col-6 label">{{ 'EMAIL' | translate }} <span class="asterReq">*</span></label>
                         <input class="col-6" name="email" type="email" ng-model="$ctrl.wsReg.email" ng-required="true" />
-                        <div ng-show="wsRegForm.email.$error.required && wsRegForm.email.$touched" class="right">
-                            <small class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
-                        </div>
-                        <div ng-show="wsRegForm.email.$error.email && wsRegForm.email.$touched" class="right">
-                            <small class="has-error">{{ 'ERROR_MSG_INVALID_EMAIL' | translate }}</small>
+                        <div ng-show="!wsRegForm.email.$pristine" ng-messages="wsRegForm.email.$error" class="right">
+                            <small ng-message="required" class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
+                            <small ng-message="email" class="has-error">{{ 'ERROR_MSG_INVALID_EMAIL' | translate }}</small>
                         </div>
                     </div>
                     <div class="row form-group">
                         <label class="col-6 label">{{ 'PHONE_NUMBER' | translate }} <span class="asterReq">*</span></label>
                         <input class="col-6" name="phoneNumber" type="number" ng-model="$ctrl.wsReg.phoneNumber" ng-required="true"/>
-                        <div ng-show="wsRegForm.phoneNumber.$error.required && wsRegForm.phoneNumber.$touched" class="right">
-                            <small class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
-                        </div>
-                        <div ng-show="wsRegForm.phoneNumber.$error.number && wsRegForm.phoneNumber.$touched" class="right">
-                            <small class="has-error">{{ 'ERROR_MSG_ONLY_NUMBERS' | translate }}</small>
+                        <div ng-show="!wsRegForm.phoneNumber.$pristine" ng-messages="wsRegForm.phoneNumber.$error" class="right">
+                            <small ng-message="required" class="has-error">{{ 'ERROR_MSG_REQUIRED' | translate }}</small>
+                            <small ng-message="number" class="has-error">{{ 'ERROR_MSG_ONLY_NUMBERS' | translate }}</small>
                         </div>
                     </div>
                 </div>
