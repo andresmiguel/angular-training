@@ -1,7 +1,7 @@
 (function () {
    'use strict';
 
-    angular.module('app.workshop', ['app.services', 'ui.router', 'ngAnimate', 'pascalprecht.translate'])
+    angular.module('app.workshop', ['app.services', 'ui.router', 'ngAnimate', 'pascalprecht.translate', 'ngMessages'])
         .config(config);
 
     config.$inject = ['$stateProvider', '$urlRouterProvider', '$translateProvider'];
